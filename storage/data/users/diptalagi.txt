@@ -1,0 +1,5 @@
+{
+    "user": "diptalagi",
+    "email": "diptalagi@gmail.com",
+    "pass": "diptasamadesu"
+}

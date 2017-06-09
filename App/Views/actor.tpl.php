@@ -5,6 +5,7 @@
 	<?php js("crayner"); ?>
 </head>
 <body>
+<input size="100" type="text" name="url" id="url"><br>
 <iframe id="fr" style="width:70%;height:500px;" src="<?php print router_url()."/iframe?user=".$_GET['user']; ?>"></iframe>
 <?php js("as"); ?>
 <script type="text/javascript">
@@ -21,8 +22,8 @@ class as
 				try{
 					x = JSON.parse(this.responseText);
 				} catch(e){ x = null; }
-				this.element		= document.getElementById('fr');
-				this.element.src	= "<?php print router_url()."/iframe?user=".$_GET['user']; ?>&add="+encodeURI(x[0]);
+				document.getElementById('fr').src	= "<?php print router_url()."/iframe?user=".$_GET['user']; ?>&add="+encodeURI(x[0]);
+				document.getElementById('url').value = x[0];
 			});
 		this.offset++;
 	}
@@ -30,7 +31,7 @@ class as
 	var a = new as;
 	setInterval(function(){
 		a.act();
-	},10000);
+	},12000);
 </script>
 </body>
 </html>

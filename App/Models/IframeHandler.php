@@ -70,7 +70,7 @@ class IframeHandler extends Model
 		$a = explode("/a/mobile/friends/profile_add_friend.php", $src, 2);
 		$a = explode("\"", $a[1], 2);
 		$a = "https://m.facebook.com/a/mobile/friends/profile_add_friend.php".html_entity_decode($a[0], ENT_QUOTES, 'UTF-8');
-		print $this->fb->get_page($a, null, array(52=>1));
+		print $this->clean($this->fb->get_page($a, null, array(52=>1)));
 	}
 
 	public function go($url)
