@@ -17,7 +17,7 @@
         "require": {
             "php": ">=5.4.0"
         },
-        "time": "2017-05-06 13:06:50",
+        "time": "2017-05-06T13:06:50+00:00",
         "type": "project",
         "installation-source": "source",
         "autoload": {
@@ -55,7 +55,7 @@
         "require": {
             "ammarfaizi2/ratools": "dev-master"
         },
-        "time": "2017-06-05 05:41:13",
+        "time": "2017-06-05T05:41:13+00:00",
         "type": "library",
         "installation-source": "source",
         "autoload": {

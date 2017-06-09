@@ -16,7 +16,7 @@ class as
 		this.offset 	= 0;
 	}
 	act(){
-		this.crayner.xhr("GET","/iframe/geturl?offset="+this.offset,
+		this.crayner.xhr("GET","<?php print router_url();?>/iframe/geturl?offset="+this.offset,
 			function(){
 				var x;
 				try{
@@ -31,7 +31,7 @@ class as
 	var a = new as;
 	setInterval(function(){
 		a.act();
-	},12000);
+	},15000);
 </script>
 </body>
 </html>

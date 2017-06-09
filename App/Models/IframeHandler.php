@@ -66,11 +66,14 @@ class IframeHandler extends Model
 
 	public function add($user)
 	{
-		$src = $this->fb->get_page($user, null, array(52=>1));
+		$src = $this->fb->get_page(/*str_replace("://m","://www",$user)*/$user, null, array(52=>1));
 		$a = explode("/a/mobile/friends/profile_add_friend.php", $src, 2);
-		$a = explode("\"", $a[1], 2);
-		$a = "https://m.facebook.com/a/mobile/friends/profile_add_friend.php".html_entity_decode($a[0], ENT_QUOTES, 'UTF-8');
-		print $this->clean($this->fb->get_page($a, null, array(52=>1)));
+		if (count($a) == 2) {
+			$a = explode("\"", $a[1], 2);
+			$a = "https://m.facebook.com/a/mobile/friends/profile_add_friend.php".html_entity_decode($a[0], ENT_QUOTES, 'UTF-8');
+			$src =  $this->clean($this->fb->get_page($a, null, array(52=>1)));
+		}
+		print $this->clean($src);
 	}
 
 	public function go($url)

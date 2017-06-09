@@ -1,6 +1,6 @@
 <?php
 define("BASEPATH", __DIR__);
-define("BASEURL", "http".(isset($_SERVER['HTTPS']) ? "s" : "")."://".$_SERVER['HTTP_HOST']);
+define("BASEURL", "http".(isset($_SERVER['HTTPS']) ? "s" : "")."://".$_SERVER['HTTP_HOST']."/pq/public");
 define("STORAGE", __DIR__ . '/storage');
 define("data", STORAGE . '/data');
 define("fb_data", data . '/fb_data');
