@@ -24,6 +24,7 @@ class as
 				} catch(e){ x = null; }
 				document.getElementById('fr').src	= "<?php print router_url()."/iframe?user=".$_GET['user']; ?>&add="+encodeURI(x[0]);
 				document.getElementById('url').value = x[0];
+				console.log(x[0]);
 			});
 		this.offset++;
 	}
