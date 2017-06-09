@@ -1,0 +1,23 @@
+{
+    "name": "ammarfaizi2/crayner",
+    "description": "Crayner Framework",
+    "type": "Project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ammar Faizi",
+            "email": "ammarfaizi2@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "ammarfaizi2/facebook": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/",
+            "Console\\": "Console/",
+            "System\\": "System/"
+        }
+    }
+}
